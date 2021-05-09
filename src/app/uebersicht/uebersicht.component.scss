@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  width: 100%;
+
+  .button-container {
+    display: block;
+    width: 100%;
+    padding: 20px 0 0 0;
+
+    a {
+      &:first-child {
+        text-align: left;
+       margin-right: 20px;
+      }
+    }
+  }
+}

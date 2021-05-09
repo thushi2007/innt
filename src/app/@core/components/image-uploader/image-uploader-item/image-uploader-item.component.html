@@ -1,0 +1,26 @@
+<div class="drop-item">
+  <div class="image" (click)="openImagePopup()">
+    <div class="previewIcon" *ngIf="this.file.type !== 'application/pdf'" [style.background-image]="'url(' + file.url  + ')'" matTooltip="Bild anschauen"></div>
+    <div class="previewIcon" *ngIf="this.file.type === 'application/pdf'" [style.background-image]="'url(assets/images/pdficon.png)'"></div>
+  </div>
+  <div class="info-container">
+    <div class="description">
+      <b>{{ file.name }}</b> <br/>
+      {{ file.type }} - {{ file.size / 1024 / 1024 | number:'.2' }} MB
+    </div>
+    <div class="progress-container">
+      <mat-progress-bar
+        [color]="'primary'"
+        [value]="progress">
+      </mat-progress-bar>
+    </div>
+  </div>
+  <div class="actions-container">
+    <div class="actions">
+      <button mat-icon-button color="warn" matTooltip="Bild entfernen"
+              (click)="removeImage(indx)">
+        <i class="fal fa-times"></i>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+@import "src/app/@core/scss/variables/global";
+@import "src/app/@core/scss/mixins/breakpoints";
+
+:host {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    width: 250px;
+    margin-top: 20px;
+  }
+
+  .list {
+    display: inline-block;
+    width: 100%;
+
+    .left {
+      display: inline-block;
+      width: 50%;
+      text-align: right;
+      padding-right: 10px;
+      padding-top: 20px;
+
+      button {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .right {
+      display: inline-block;
+      width: 50%;
+      text-align: left;
+      padding-left: 10px;
+      padding-top: 20px;
+
+      button {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .home-back {
+    font-size: 12pt;
+  }
+}

@@ -1,0 +1,14 @@
+@import "src/app/@core/scss/variables/global";
+@import "src/app/@core/scss/mixins/breakpoints";
+
+:host {
+  display: block;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .mat-dialog-actions {
+    padding: 15px;
+    background-color: #eeeeee;
+  }
+}

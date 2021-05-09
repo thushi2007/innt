@@ -1,0 +1,52 @@
+@import "src/app/@core/scss/variables/global";
+@import "src/app/@core/scss/mixins/breakpoints";
+
+:host {
+  display: block;
+  width: 100%;
+  //max-height: 100px;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  //color: #ffffff;
+
+  -webkit-box-shadow: 0px 0px 87px -45px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 87px -45px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 87px -45px rgba(0, 0, 0, 0.75);
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+
+  background-color: #F2F3F4;
+  font-family: $site-font;
+  font-weight: 400;
+  font-size: 11pt;
+  opacity: 0.9;
+
+  .text {
+    display: inline-block;
+    width: calc(100% - 100px);
+  }
+
+  .icon {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    vertical-align: top;
+
+    > i {
+      font-size: 50pt;
+    }
+  }
+
+  .closeNotification {
+    display: inline-block;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    //text-decoration: none;
+    color: #ffffff;
+    background-color: $site-theme-blue;
+    font-weight: 500;
+  }
+}

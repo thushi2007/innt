@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Smart fridge | InnT</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+  <style type="text/css">
+    html {
+      overflow-y: scroll;
+      font-family: "Roboto Condensed", sans-serif;
+    }
+
+    .hme-loader-container {
+      z-index: 999999;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: block;
+      font-family: "Roboto Condensed", sans-serif;
+      text-align: center;
+      background-color: #0049b1;
+    }
+
+    .hme-loader-gif {
+      text-align: center;
+      display: inline-block;
+      margin: 20% auto;
+      width: 200px;
+      padding: 20px 0px 20px 0px;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+
+    .hme-gif {
+      display: inline-block;
+      margin: auto auto auto auto;
+      max-width: 100px;
+    }
+
+    .hme-loader-img {
+      display: block;
+      width: 100%;
+    }
+
+    .hme-loader-line {
+      display: block;
+      width: 100%;
+      padding: 0px 0px 0px 0px;
+      margin: 0px 0px 0px 0px;
+      font-weight: 600;
+      font-size: 12pt;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hme-loader-container" id="hme-loader-container">
+  <div class="hme-loader-gif shadow">
+    <div class="hme-loader-img">
+      <img class="hme-gif" src="/assets/images/loading.gif" alt="Page is loading">
+    </div>
+    <div class="hme-loader-line">
+      Die Seite wird geladen...
+    </div>
+  </div>
+</div>
+
+<aim-root></aim-root>
+</body>
+</html>
