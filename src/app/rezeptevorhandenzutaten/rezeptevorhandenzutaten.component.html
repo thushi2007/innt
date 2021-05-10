@@ -8,10 +8,10 @@
     <h1 class="text-center">Rezepte</h1>
 
     <div class="row justify-content-center">
-        <mat-button-toggle-group  [(ngModel)]="current">
+        <mat-button-toggle-group  [(ngModel)]="currentCategory">
             <mat-button-toggle value="all">Alle</mat-button-toggle>
-            <mat-button-toggle value="vegi">Vegetarisch</mat-button-toggle>
-            <mat-button-toggle value="vegan">Vegan</mat-button-toggle>
+            <mat-button-toggle value="Vegetarisch">Vegetarisch</mat-button-toggle>
+            <mat-button-toggle value="Vegan">Vegan</mat-button-toggle>
         </mat-button-toggle-group>
     </div>
     <div class="row justify-content-center mt-2">
@@ -23,19 +23,36 @@
 
     <div class="row mt-3">
 
-        <div class="col-12">
-            <mat-card class="example-card" (click)="routeToRezept()">
-                <div  class="food-img" mat-card-image [style.background]="'url(assets/images/food/spaghetti.png)'"></div>
-                <mat-card-content>Spaghetti Bolognese</mat-card-content>
-            </mat-card>
-        </div>
+        <ng-container  *ngFor="let recipe of recipes">
+            <div class="col-12 my-1" *ngIf="(currentCategory === 'all' || recipe.categories.includes(currentCategory)) && (!quickandeasy || recipe.quickAndEasy === true)">
+                <mat-card (click)="routeToRezept()">
+                    <div  class="food-img" mat-card-image [style.background]="'url('+recipe.image+')'"></div>
+                    <mat-card-content>
 
-        <div class="col-12 mt-2">
-            <mat-card class="example-card" (click)="routeToRezept()">
-                <div  class="food-img" mat-card-image [style.background]="'url(assets/images/food/pizza.png)'"></div>
-                <mat-card-content>Blechpizza</mat-card-content>
-            </mat-card>
-        </div>
+                        <mat-list>
+                            <mat-list-item>
+                                <mat-icon mat-list-icon>restaurant_menu</mat-icon>
+                                <div mat-line>{{recipe.name}}</div>
+                            </mat-list-item>
+                            <mat-list-item>
+                                <mat-icon mat-list-icon>schedule</mat-icon>
+                                <div mat-line>{{recipe.timeToCook}}min</div>
+                            </mat-list-item>
+
+                            <mat-list-item>
+                                <mat-icon mat-list-icon>category</mat-icon>
+                                <div mat-line>{{recipe.categories.join(',')}}</div>
+                            </mat-list-item>
+
+                        </mat-list>
+                        <mat-icon></mat-icon>
+
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </ng-container>
+
+
 
     </div>
 
