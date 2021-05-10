@@ -76,10 +76,6 @@ $foreground: map-get($theme, foreground);
 // Include theme styles for core and each component used in your app.
 @include angular-material-theme($theme);
 
-.mat-divider {
-  border: 1px solid #A4A4A4;
-  margin-bottom: 15px !important;
-}
 
 .mat-dialog-container{
   //padding: 0 !important;

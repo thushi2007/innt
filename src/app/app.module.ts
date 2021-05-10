@@ -23,14 +23,11 @@ import {KuehlschrankComponent} from './kuehlschrank/kuehlschrank.component';
 import {ZutatenComponent} from './zutaten/zutaten.component';
 import {LiveviewComponent} from './liveview/liveview.component';
 import {RezepteComponent} from './rezepte/rezepte.component';
-import {RezeptevorhandenzutatenComponent} from './rezeptevorhandenzutaten/rezeptevorhandenzutaten.component';
-import {RezeptevorhandenzutatenvegetarischComponent} from './rezeptevorhandenzutatenvegetarisch/rezeptevorhandenzutatenvegetarisch.component';
-import {RezeptevorhandenzutatenveganComponent} from './rezeptevorhandenzutatenvegan/rezeptevorhandenzutatenvegan.component';
-import {RezeptdetailComponent} from './rezeptdetail/rezeptdetail.component';
+import {RezepteListeComponent} from './rezepte-liste/rezepte-liste.component';
+
+import {RezeptDetailComponent} from './rezept-detail/rezept-detail.component';
 import {MatSelectModule} from '@angular/material/select';
 import {RezeptorderComponent} from './rezeptorder/rezeptorder.component';
-import {RezeptemitfehlendenzutatenComponent} from './rezeptemitfehlendenzutaten/rezeptemitfehlendenzutaten.component';
-import {RezeptdetailohnezutatenComponent} from './rezeptdetailohnezutaten/rezeptdetailohnezutaten.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {FormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
@@ -40,6 +37,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatCardModule} from '@angular/material/card';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { LoginComponent } from './login/login.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
     declarations: [
@@ -49,13 +48,10 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
         ZutatenComponent,
         LiveviewComponent,
         RezepteComponent,
-        RezeptevorhandenzutatenComponent,
-        RezeptevorhandenzutatenvegetarischComponent,
-        RezeptevorhandenzutatenveganComponent,
-        RezeptdetailComponent,
+        RezepteListeComponent,
+        RezeptDetailComponent,
         RezeptorderComponent,
-        RezeptemitfehlendenzutatenComponent,
-        RezeptdetailohnezutatenComponent
+        LoginComponent,
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),
@@ -80,6 +76,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
         MatButtonToggleModule,
         MatCardModule,
         MatSlideToggleModule,
+        MatInputModule,
     ],
     bootstrap: [AppComponent]
 })

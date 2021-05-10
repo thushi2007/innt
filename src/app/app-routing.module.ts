@@ -5,13 +5,11 @@ import {KuehlschrankComponent} from './kuehlschrank/kuehlschrank.component';
 import {ZutatenComponent} from './zutaten/zutaten.component';
 import {LiveviewComponent} from './liveview/liveview.component';
 import {RezepteComponent} from './rezepte/rezepte.component';
-import {RezeptevorhandenzutatenComponent} from './rezeptevorhandenzutaten/rezeptevorhandenzutaten.component';
-import {RezeptevorhandenzutatenvegetarischComponent} from './rezeptevorhandenzutatenvegetarisch/rezeptevorhandenzutatenvegetarisch.component';
-import {RezeptevorhandenzutatenveganComponent} from './rezeptevorhandenzutatenvegan/rezeptevorhandenzutatenvegan.component';
-import {RezeptdetailComponent} from './rezeptdetail/rezeptdetail.component';
+import {RezepteListeComponent} from './rezepte-liste/rezepte-liste.component';
+
+import {RezeptDetailComponent} from './rezept-detail/rezept-detail.component';
 import {RezeptorderComponent} from './rezeptorder/rezeptorder.component';
-import {RezeptemitfehlendenzutatenComponent} from './rezeptemitfehlendenzutaten/rezeptemitfehlendenzutaten.component';
-import {RezeptdetailohnezutatenComponent} from './rezeptdetailohnezutaten/rezeptdetailohnezutaten.component';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
   {
@@ -23,32 +21,16 @@ const routes: Routes = [
     component: RezepteComponent
   },
   {
-    path: 'rezepte/item',
-    component: RezeptdetailComponent
-  },
-  {
-    path: 'rezepte/item2',
-    component: RezeptdetailohnezutatenComponent
+    path: 'rezepte/:id/detail',
+    component: RezeptDetailComponent
   },
   {
     path: 'rezepte/bestellen',
     component: RezeptorderComponent
   },
   {
-    path: 'rezepte/vorhandenezutaten',
-    component: RezeptevorhandenzutatenComponent
-  },
-  {
-    path: 'rezepte/fehlendezutaten',
-    component: RezeptemitfehlendenzutatenComponent
-  },
-  {
-    path: 'rezepte/vorhandenezutaten/vegetarisch',
-    component: RezeptevorhandenzutatenvegetarischComponent
-  },
-  {
-    path: 'rezepte/vorhandenezutaten/vegan',
-    component: RezeptevorhandenzutatenveganComponent
+    path: 'rezepte/liste',
+    component: RezepteListeComponent
   },
   {
     path: 'kuehlschrank',
@@ -63,8 +45,12 @@ const routes: Routes = [
     component: LiveviewComponent
   },
   {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
     path: '**',
-    redirectTo: 'uebersicht',
+    redirectTo: 'login',
     pathMatch: 'full'
   }
 ];

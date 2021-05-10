@@ -3,11 +3,12 @@
         <div class="col-12">
             <h1 class="text-center">Smart Fridge</h1>
         </div>
-        <div class=" col-12 text-center mt-2">
-            <button mat-raised-button color="primary" routerLink="/rezepte">Rezepte</button>
-        </div>
-        <div class="col-12 text-center mt-2">
-            <button mat-raised-button color="primary" routerLink="/kuehlschrank">Kühlschrankinhalt</button>
+
+        <div class="col-12 text-center">
+            <mat-button-toggle-group>
+                <mat-button-toggle routerLink="/rezepte">Rezepte</mat-button-toggle>
+                <mat-button-toggle routerLink="/kuehlschrank" value="italic">Kühlschrank</mat-button-toggle>
+            </mat-button-toggle-group>
         </div>
 
     </div>

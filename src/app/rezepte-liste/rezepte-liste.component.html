@@ -1,6 +1,6 @@
 <div class="container">
 
-    <button class="back-button" mat-icon-button routerLink="/kuehlschrank">
+    <button class="back-button" mat-icon-button routerLink="/rezepte">
         <mat-icon>arrow_back</mat-icon>
     </button>
 
@@ -24,8 +24,8 @@
     <div class="row mt-3">
 
         <ng-container  *ngFor="let recipe of recipes">
-            <div class="col-12 my-1" *ngIf="(currentCategory === 'all' || recipe.categories.includes(currentCategory)) && (!quickandeasy || recipe.quickAndEasy === true)">
-                <mat-card (click)="routeToRezept()">
+            <div class="col-12 my-1" *ngIf="(currentCategory === 'all' || recipe.categories.includes(currentCategory)) && (!quickandeasy || recipe.level === 'Einfach')">
+                <mat-card (click)="routeToRezept(recipe)">
                     <div  class="food-img" mat-card-image [style.background]="'url('+recipe.image+')'"></div>
                     <mat-card-content>
 
@@ -43,6 +43,12 @@
                                 <mat-icon mat-list-icon>category</mat-icon>
                                 <div mat-line>{{recipe.categories.join(',')}}</div>
                             </mat-list-item>
+
+                            <mat-list-item>
+                                <mat-icon mat-list-icon>list</mat-icon>
+                                <div mat-line>{{recipe.level}}</div>
+                            </mat-list-item>
+
 
                         </mat-list>
                         <mat-icon></mat-icon>

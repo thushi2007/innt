@@ -1,0 +1,56 @@
+<div class="container" *ngIf="recipe">
+
+
+  <button class="back-button" mat-icon-button routerLink="/rezepte/liste">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+
+  <h1 class="text-center">{{recipe.name}}</h1>
+
+  <div  class="food-img"  [style.background]="'url('+recipe.image+')'"></div>
+
+
+  <div class="row">
+    <div class="col-12 mt-3">
+      <mat-form-field appearance="outline">
+        <mat-label>Anzahl Personen</mat-label>
+        <mat-select [(ngModel)]="person">
+          <mat-option [value]="1">1 Person</mat-option>
+          <mat-option [value]="2">2 Personen</mat-option>
+          <mat-option [value]="3">3 Personen</mat-option>
+          <mat-option [value]="4">4 Personen</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+
+    <div class="col-12">
+      <h4>Zutaten</h4>
+      <mat-list>
+        <mat-list-item *ngFor="let ingredient of recipe.ingredients">
+          <mat-icon mat-list-icon>remove</mat-icon>
+          <div mat-line>{{ingredient.name}} </div>
+          <div mat-line>{{ingredient.amount * person}} {{ingredient.unit}}</div>
+
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <h4>Anleitung</h4>
+    <p>   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+      magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+      gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+      elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+      eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+      dolor sit amet.</p>
+</div>
+
+
+
+</div>
+
+
+

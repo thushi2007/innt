@@ -8,13 +8,11 @@
 
   <h1 class="text-center">Kühlschrank</h1>
 
-  <div class=" col-12 text-center mt-2">
-    <button mat-raised-button color="primary" routerLink="/kuehlschrank/zutaten">Vorhandene Zutaten</button>
+  <div class="col-12 text-center">
+    <mat-button-toggle-group>
+      <mat-button-toggle routerLink="/kuehlschrank/zutaten">Inventarliste</mat-button-toggle>
+      <mat-button-toggle routerLink="/kuehlschrank/liveview" >Live View</mat-button-toggle>
+    </mat-button-toggle-group>
   </div>
-  <div class="col-12 text-center mt-2">
-    <button mat-raised-button color="primary" routerLink="/kuehlschrank/liveview">Live View</button>
-  </div>
-
-
 
 </div>
