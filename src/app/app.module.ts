@@ -33,41 +33,55 @@ import {RezeptemitfehlendenzutatenComponent} from './rezeptemitfehlendenzutaten/
 import {RezeptdetailohnezutatenComponent} from './rezeptdetailohnezutaten/rezeptdetailohnezutaten.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {FormsModule} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCardModule} from '@angular/material/card';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UebersichtComponent,
-    KuehlschrankComponent,
-    ZutatenComponent,
-    LiveviewComponent,
-    RezepteComponent,
-    RezeptevorhandenzutatenComponent,
-    RezeptevorhandenzutatenvegetarischComponent,
-    RezeptevorhandenzutatenveganComponent,
-    RezeptdetailComponent,
-    RezeptorderComponent,
-    RezeptemitfehlendenzutatenComponent,
-    RezeptdetailohnezutatenComponent
-  ],
-  imports: [
-    BrowserModule.withServerTransition({appId: 'serverApp'}),
-    TransferHttpCacheModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    FlexLayoutModule,
-    CoreModule.forRoot(),
-    MatGoogleMapsAutocompleteModule,
-    NgxMaskModule.forRoot({validation: false}),
-    MatMomentDateModule,
-    InfiniteScrollModule,
-    AngularResizedEventModule,
-    AppRoutingModule,
-    MatSelectModule,
-    MatCheckboxModule,
-    FormsModule
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        UebersichtComponent,
+        KuehlschrankComponent,
+        ZutatenComponent,
+        LiveviewComponent,
+        RezepteComponent,
+        RezeptevorhandenzutatenComponent,
+        RezeptevorhandenzutatenvegetarischComponent,
+        RezeptevorhandenzutatenveganComponent,
+        RezeptdetailComponent,
+        RezeptorderComponent,
+        RezeptemitfehlendenzutatenComponent,
+        RezeptdetailohnezutatenComponent
+    ],
+    imports: [
+        BrowserModule.withServerTransition({appId: 'serverApp'}),
+        TransferHttpCacheModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        FlexLayoutModule,
+        CoreModule.forRoot(),
+        MatGoogleMapsAutocompleteModule,
+        NgxMaskModule.forRoot({validation: false}),
+        MatMomentDateModule,
+        InfiniteScrollModule,
+        AngularResizedEventModule,
+        AppRoutingModule,
+        MatSelectModule,
+        MatCheckboxModule,
+        FormsModule,
+        MatButtonModule,
+        MatListModule,
+        MatIconModule,
+        MatTabsModule,
+        MatButtonToggleModule,
+        MatCardModule,
+        MatSlideToggleModule,
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

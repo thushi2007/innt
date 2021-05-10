@@ -1,9 +1,20 @@
+
+
 <div class="container">
-  <h1>Kühlschrankinhalt</h1>
+
+  <button class="back-button" mat-icon-button routerLink="/uebersicht">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <h1 class="text-center">Kühlschrank</h1>
+
+  <div class=" col-12 text-center mt-2">
+    <button mat-raised-button color="primary" routerLink="/kuehlschrank/zutaten">Vorhandene Zutaten</button>
+  </div>
+  <div class="col-12 text-center mt-2">
+    <button mat-raised-button color="primary" routerLink="/kuehlschrank/liveview">Live View</button>
+  </div>
 
 
-  <a class="customButtonBlueLink" [routerLink]="'/kuehlschrank/zutaten'">vorhandene Zutaten</a><br />
-  <a class="customButtonBlueLink" [routerLink]="'/kuehlschrank/liveview'">Live View</a>
-<br />
-  <a class="home-back" [routerLink]="'/übersicht'"><i class="fal fa-arrow-left"></i> zurück</a>
+
 </div>

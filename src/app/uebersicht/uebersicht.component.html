@@ -1,9 +1,15 @@
-<div class="container">
-  <h1>Smart Fridge</h1>
-  <h4>v0.1</h4>
+<div class="container h-75 d-flex justify-content-center align-items-center">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h1 class="text-center">Smart Fridge</h1>
+        </div>
+        <div class=" col-12 text-center mt-2">
+            <button mat-raised-button color="primary" routerLink="/rezepte">Rezepte</button>
+        </div>
+        <div class="col-12 text-center mt-2">
+            <button mat-raised-button color="primary" routerLink="/kuehlschrank">Kühlschrankinhalt</button>
+        </div>
 
-  <div class="button-container">
-    <a class="customButtonBlueLink" [routerLink]="'/rezepte'">Rezepte</a>
-    <a class="customButtonBlueLink" [routerLink]="'/kuehlschrank'">Kühlschrankinhalt</a>
-  </div>
+    </div>
 </div>
+

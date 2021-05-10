@@ -8,6 +8,7 @@ import {Router} from '@angular/router';
 })
 export class RezeptevorhandenzutatenComponent implements OnInit {
   quickandeasy = false;
+  public current = 'all';
   constructor(private router: Router) {
   }
 

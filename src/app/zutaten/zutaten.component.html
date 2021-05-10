@@ -1,16 +1,61 @@
+
+
 <div class="container">
-  <h1>Kühlschrankinhalt / Vorhandene Zutaten</h1>
+
+  <button class="back-button" mat-icon-button routerLink="/kuehlschrank">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
 
 
-  <div class="list">
-    <p>2 Liter Milch</p>
-    <p>Kopfsalat</p>
-    <p>Eier</p>
-    <p>200 Gramm Gurke</p>
-    <p>300 Gramm Blumenkohl</p>
-    <p>2 Zitronen</p>
-    <p>230 Gramm Salami</p>
-  </div>
+  <h1 class="text-center">Zutaten</h1>
+
+  <mat-list>
+    <div mat-subheader>Ablaufdatum beachten</div>
+    <mat-list-item>
+      <mat-icon mat-list-icon color="warn">close</mat-icon>
+      <div mat-line>Eier</div>
+      <div mat-line>09.05.2021</div>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-icon mat-list-icon style="color: orange">remove</mat-icon>
+      <div mat-line>2 Liter Milch </div>
+      <div mat-line>10.05.2021</div>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+    <div mat-subheader>Inhalt</div>
+
+    <mat-list-item>
+      <mat-icon mat-list-icon style="color: green">check</mat-icon>
+      <div mat-line>Kopfsalat</div>
+      <div mat-line>12.05.2021</div>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-icon mat-list-icon style="color: green">check</mat-icon>
+      <div mat-line>200 Gramm Gurke</div>
+      <div mat-line>13.05.2021</div>
+    </mat-list-item>
+
+
+    <mat-list-item>
+      <mat-icon mat-list-icon style="color: green">check</mat-icon>
+      <div mat-line>200 Grmam Blumenkohl</div>
+      <div mat-line>15.05.2021</div>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-icon mat-list-icon style="color: green">check</mat-icon>
+      <div mat-line>2 Zitronen</div>
+      <div mat-line>15.05.2021</div>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-icon mat-list-icon style="color: green">check</mat-icon>
+      <div mat-line>250 Gramm Salami</div>
+      <div mat-line>15.05.2021</div>
+    </mat-list-item>
+
+  </mat-list>
 </div>
-<br />
-<a class="home-back" [routerLink]="'/kuehlschrank'"><i class="fal fa-arrow-left"></i> zurück</a>

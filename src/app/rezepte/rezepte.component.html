@@ -1,15 +1,20 @@
+
+
 <div class="container">
-  <h1>Rezepte</h1>
+
+  <button class="back-button" mat-icon-button routerLink="/uebersicht">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <h1 class="text-center">Rezepte</h1>
+
+  <div class=" col-12 text-center mt-2">
+    <button mat-raised-button color="primary" routerLink="/rezepte/vorhandenezutaten">Mit Vorhandene Zutaten kochen</button>
+  </div>
+  <div class="col-12 text-center mt-2">
+    <button mat-raised-button color="primary" routerLink="/rezepte/fehlendezutaten">Alle Rezepte</button>
+  </div>
 
 
-  <a class="customButtonBlueLink" [routerLink]="'/rezepte/vorhandenezutaten'">Rezepte nur mit vorhandenen Zutaten</a><br/>
-  <a class="customButtonBlueLink" [routerLink]="'/rezepte/fehlendezutaten'">Weitere Rezepte zu denen Zutaten fehlen</a><br/>
-<!--  <a class="customButtonBlueLink" [routerLink]="'/rezepte/vorhandenezutaten'">Grosser Hunger</a><br/>-->
-<!--  <a class="customButtonBlueLink" [routerLink]="'/rezepte/vorhandenezutaten'">Vegan</a><br/>-->
-<!--  <a class="customButtonBlueLink" [routerLink]="'/rezepte/vorhandenezutaten'">Vegetarisch</a><br/>-->
 
-<!--  <a class="customButtonBlueLink" [routerLink]="'/rezepte/vorhandenezutaten'">Schnell und einfach</a>-->
-
-
-  <a class="home-back" [routerLink]="'/uebersicht'"><i class="fal fa-arrow-left"></i> zurück</a>
 </div>
