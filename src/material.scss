@@ -1,0 +1,80 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$mat-black: (
+  500: black,
+  contrast: (
+    500: white,
+  )
+);
+
+$mat-fridge-blue: (
+  50: #EFF5FB,
+  100: #E0ECF8,
+  200: #A9D0F5,
+  300: #81BEF7,
+  400: #58ACFA,
+  500: #0049b1,
+  600: #0049b1,
+  700: #0431B4,
+  800: #08298A,
+  900: #0B2161,
+  A100: #2ECCFA,
+  A200: #01A9DB,
+  A400: #0489B1,
+  A700: #0489B1,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: white,
+    400: white,
+    500: $white-87-opacity,
+    600: $white-87-opacity,
+    700: $white-87-opacity,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: $white-87-opacity,
+    A400: $white-87-opacity,
+    A700: $white-87-opacity,
+  )
+);
+
+
+
+$smart-fridge-primary: mat-palette($mat-fridge-blue, 50);
+$smart-fridge-accent: mat-palette($mat-light-blue, 50);
+
+// The warn palette is optional (defaults to red).
+$smart-fridge-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$smart-fridge-theme: mat-light-theme((
+  color: (
+    primary: $smart-fridge-primary,
+    accent: $smart-fridge-accent,
+    warn: $smart-fridge-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($smart-fridge-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

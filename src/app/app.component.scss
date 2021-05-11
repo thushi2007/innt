@@ -1,10 +1,11 @@
-:host {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 10%;
+$opacity: 0.7;
 
-  .home-back {
-    font-size: 12pt;
-  }
+.device-content{
+  overflow-y: auto;
+  background-image: linear-gradient(to right top, rgba(0, 73, 177,$opacity), rgba(0, 123, 218, $opacity), rgba(0, 167, 231, $opacity), rgba(0, 208, 221, $opacity) , rgba(10, 245, 202, $opacity));
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }

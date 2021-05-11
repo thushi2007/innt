@@ -1,72 +1,57 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {HttpClientModule} from '@angular/common/http';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BrowserModule} from '@angular/platform-browser';
 
-// own modules
-import {CoreModule} from '@core/core.module';
-
-// third party tools
-import {MatMomentDateModule} from '@angular/material-moment-adapter';
-import {MatGoogleMapsAutocompleteModule} from '@angular-material-extensions/google-maps-autocomplete';
-import {NgxMaskModule} from 'ngx-mask';
-import {InfiniteScrollModule} from 'ngx-infinite-scroll';
-import {TransferHttpCacheModule} from '@nguniversal/common';
-
-// own components
-import {AppComponent} from './app.component';
-import {AngularResizedEventModule} from 'angular-resize-event';
-import {UebersichtComponent} from './uebersicht/uebersicht.component';
 import {AppRoutingModule} from './app-routing.module';
-import {KuehlschrankComponent} from './kuehlschrank/kuehlschrank.component';
-import {ZutatenComponent} from './zutaten/zutaten.component';
-import {LiveviewComponent} from './liveview/liveview.component';
-import {RezepteComponent} from './rezepte/rezepte.component';
-import {RezeptevorhandenzutatenComponent} from './rezeptevorhandenzutaten/rezeptevorhandenzutaten.component';
-import {RezeptevorhandenzutatenvegetarischComponent} from './rezeptevorhandenzutatenvegetarisch/rezeptevorhandenzutatenvegetarisch.component';
-import {RezeptevorhandenzutatenveganComponent} from './rezeptevorhandenzutatenvegan/rezeptevorhandenzutatenvegan.component';
-import {RezeptdetailComponent} from './rezeptdetail/rezeptdetail.component';
-import {MatSelectModule} from '@angular/material/select';
-import {RezeptorderComponent} from './rezeptorder/rezeptorder.component';
-import {RezeptemitfehlendenzutatenComponent} from './rezeptemitfehlendenzutaten/rezeptemitfehlendenzutaten.component';
-import {RezeptdetailohnezutatenComponent} from './rezeptdetailohnezutaten/rezeptdetailohnezutaten.component';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {LoginComponent} from './login/login.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {HomeComponent} from './home/home.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {RecipeComponent} from './recipe/recipe.component';
+import {MatIconModule} from '@angular/material/icon';
+import {RecipeListComponent} from './recipe-list/recipe-list.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
 import {FormsModule} from '@angular/forms';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import {MatOptionModule} from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
+import { FridgeComponent } from './fridge/fridge.component';
+import { FridgeIngredientsComponent } from './fridge-ingredients/fridge-ingredients.component';
+import { FridgeLiveViewComponent } from './fridge-live-view/fridge-live-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UebersichtComponent,
-    KuehlschrankComponent,
-    ZutatenComponent,
-    LiveviewComponent,
-    RezepteComponent,
-    RezeptevorhandenzutatenComponent,
-    RezeptevorhandenzutatenvegetarischComponent,
-    RezeptevorhandenzutatenveganComponent,
-    RezeptdetailComponent,
-    RezeptorderComponent,
-    RezeptemitfehlendenzutatenComponent,
-    RezeptdetailohnezutatenComponent
+    LoginComponent,
+    HomeComponent,
+    RecipeComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    FridgeComponent,
+    FridgeIngredientsComponent,
+    FridgeLiveViewComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({appId: 'serverApp'}),
-    TransferHttpCacheModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    FlexLayoutModule,
-    CoreModule.forRoot(),
-    MatGoogleMapsAutocompleteModule,
-    NgxMaskModule.forRoot({validation: false}),
-    MatMomentDateModule,
-    InfiniteScrollModule,
-    AngularResizedEventModule,
+    BrowserModule,
     AppRoutingModule,
-    MatSelectModule,
-    MatCheckboxModule,
-    FormsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
+    MatButtonToggleModule,
+    MatIconModule,
+    MatCardModule,
+    MatListModule,
+    FormsModule,
+    MatSlideToggleModule,
+    MatSelectModule
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

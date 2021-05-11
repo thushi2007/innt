@@ -1,3 +1,20 @@
-<router-outlet></router-outlet>
-<!--<br />-->
-<!--<a class="home-back" [routerLink]="'/'"><i class="fal fa-arrow-left"></i> zurück</a>-->
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <div class="row justify-content-center">
+    <div class="col-12 align-self-center">
+
+      <div class="device device-iphone-x">
+        <div class="device-frame">
+          <div id="device-content" class="device-content py-5">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+        <div class="device-stripe"></div>
+        <div class="device-header"></div>
+        <div class="device-sensors"></div>
+        <div class="device-btns"></div>
+        <div class="device-power"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
