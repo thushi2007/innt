@@ -18,6 +18,8 @@ export interface IRecipe {
   level: Level;
   categories: string[];
   ingredients: IIngredient[];
+  like: boolean;
+  saved: boolean;
 }
 
 @Injectable({
@@ -34,11 +36,13 @@ export class RecipeService {
         timeToCook: 25,
         level: Level.EINFACH,
         categories: ['Italienisch'],
+        like: false,
+        saved: false,
         ingredients: [
           {
             name: 'Zutat 1',
             amount: 1,
-            unit: 'kg'
+            unit: 'kg',
           },
           {
             name: 'Zutat 2',
@@ -69,6 +73,8 @@ export class RecipeService {
         timeToCook: 40,
         level: Level.MITTEL,
         categories: ['Italienisch'],
+        like: false,
+        saved: false,
         ingredients: [
           {
             name: 'Zutat 1',
@@ -104,6 +110,8 @@ export class RecipeService {
         timeToCook: 50,
         level: Level.SCHWER,
         categories: ['Vegetarisch'],
+        like: false,
+        saved: false,
         ingredients: [
           {
             name: 'Zutat 1',
@@ -139,6 +147,8 @@ export class RecipeService {
         timeToCook: 30,
         level: Level.EINFACH,
         categories: ['Vegetarisch'],
+        like: false,
+        saved: false,
         ingredients: [
           {
             name: 'Zutat 1',
@@ -174,6 +184,8 @@ export class RecipeService {
         timeToCook: 35,
         level: Level.EINFACH,
         categories: ['Thailändisch', 'Vegan'],
+        like: false,
+        saved: false,
         ingredients: [
           {
             name: 'Zutat 1',
@@ -209,6 +221,8 @@ export class RecipeService {
         timeToCook: 40,
         level: Level.SCHWER,
         categories: ['Vegan'],
+        like: false,
+        saved: false,
         ingredients: [
           {
             name: 'Zutat 1',

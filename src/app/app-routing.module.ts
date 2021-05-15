@@ -8,6 +8,7 @@ import {RecipeDetailComponent} from './recipe-detail/recipe-detail.component';
 import {FridgeComponent} from './fridge/fridge.component';
 import {FridgeIngredientsComponent} from './fridge-ingredients/fridge-ingredients.component';
 import {FridgeLiveViewComponent} from './fridge-live-view/fridge-live-view.component';
+import {RecipeOrderComponent} from "./recipe-order/recipe-order.component";
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'recipe/:id/detail',
     component: RecipeDetailComponent
+  },
+  {
+    path: 'recipe/:id/order',
+    component: RecipeOrderComponent
   },
   {
     path: 'fridge',

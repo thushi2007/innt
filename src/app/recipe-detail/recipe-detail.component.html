@@ -8,12 +8,25 @@
 
   <h1 class="text-center">{{recipe.name}}</h1>
 
+<div class="row">
   <div  class="food-img"  [style.background]="'url('+recipe.image+')'"></div>
+</div>
+
+  <div class="row">
+    <button class="order" mat-raised-button routerLink="/recipe/{{recipe.id}}/order"><mat-icon>shopping_cart</mat-icon>Bestellen</button>
+  </div>
+  <div class="row justify-content-end">
+    <button mat-icon-button (click)="recipe.like = !recipe.like"><mat-icon [ngClass]="{'like': recipe.like}" >favorite_border</mat-icon></button>
+    <button mat-icon-button (click)="recipe.saved = !recipe.saved" [ngClass]="{'saved': recipe.saved}"><mat-icon>bookmark_border</mat-icon></button>
+  </div>
+
+
+
 
 
   <div class="row">
     <div class="col-12 mt-3">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" [style.width]="'100%'">
         <mat-label>Anzahl Personen</mat-label>
         <mat-select [(ngModel)]="person">
           <mat-option [value]="1">1 Person</mat-option>

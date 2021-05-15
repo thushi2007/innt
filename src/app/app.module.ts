@@ -23,6 +23,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { FridgeComponent } from './fridge/fridge.component';
 import { FridgeIngredientsComponent } from './fridge-ingredients/fridge-ingredients.component';
 import { FridgeLiveViewComponent } from './fridge-live-view/fridge-live-view.component';
+import { RecipeOrderComponent } from './recipe-order/recipe-order.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FridgeLiveViewComponent } from './fridge-live-view/fridge-live-view.com
     RecipeDetailComponent,
     FridgeComponent,
     FridgeIngredientsComponent,
-    FridgeLiveViewComponent
+    FridgeLiveViewComponent,
+    RecipeOrderComponent
   ],
   imports: [
     BrowserModule,
