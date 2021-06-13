@@ -1,0 +1,71 @@
+<div class="container">
+
+  <button class="back-button" mat-icon-button routerLink="/recipe">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+
+  <h1 class="text-center">Rezepte</h1>
+
+  <div class="row">
+    <div class="col-12 text-center">
+      <mat-button-toggle-group  [(ngModel)]="currentCategory">
+        <mat-button-toggle value="all">Alle</mat-button-toggle>
+        <mat-button-toggle value="Vegetarisch">Vegetarisch</mat-button-toggle>
+        <mat-button-toggle value="Vegan">Vegan</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+
+  </div>
+  <div class="row mt-2">
+    <div class="col-12 text-center">
+      <mat-slide-toggle  labelPosition="before" [color]="'primary'" [(ngModel)]="quickandeasy">schnell und einfach
+      </mat-slide-toggle>
+    </div>
+
+  </div>
+
+
+  <div class="row mt-3">
+
+    <ng-container  *ngFor="let recipe of recipes">
+      <div class="col-12 my-1" *ngIf="(currentCategory === 'all' || recipe.categories.includes(currentCategory)) && (!quickandeasy || recipe.level === 'Einfach')">
+        <mat-card (click)="routeToRecipe(recipe)">
+          <div  class="food-img" mat-card-image [style.background]="'url('+recipe.image+')'"></div>
+          <mat-card-content>
+
+            <mat-list>
+              <mat-list-item>
+                <mat-icon mat-list-icon>restaurant_menu</mat-icon>
+                <div mat-line>{{recipe.name}}</div>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon mat-list-icon>schedule</mat-icon>
+                <div mat-line>{{recipe.timeToCook}}min</div>
+              </mat-list-item>
+
+              <mat-list-item>
+                <mat-icon mat-list-icon>category</mat-icon>
+                <div mat-line>{{recipe.categories.join(',')}}</div>
+              </mat-list-item>
+
+              <mat-list-item>
+                <mat-icon mat-list-icon>list</mat-icon>
+                <div mat-line>{{recipe.level}}</div>
+              </mat-list-item>
+
+
+            </mat-list>
+            <mat-icon></mat-icon>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </ng-container>
+
+
+
+  </div>
+
+
+</div>

@@ -1,0 +1,39 @@
+
+@import "material";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body{
+  color: white;
+}
+
+
+*:focus {
+  outline: none !important;
+}
+
+.back-button{
+  position: absolute !important;
+  .mat-icon{
+    font-size: 30px;
+  }
+}
+
+.food-img{
+  height: 200px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.vh-75{
+  height: 75vh;
+}
+
+
+  .mat-list-base .mat-list-item {
+    color: white;
+  }
+
+.mat-list-base .mat-subheader {
+  color: white;
+}

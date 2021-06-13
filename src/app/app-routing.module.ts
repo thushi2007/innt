@@ -1,78 +1,61 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {UebersichtComponent} from './uebersicht/uebersicht.component';
-import {KuehlschrankComponent} from './kuehlschrank/kuehlschrank.component';
-import {ZutatenComponent} from './zutaten/zutaten.component';
-import {LiveviewComponent} from './liveview/liveview.component';
-import {RezepteComponent} from './rezepte/rezepte.component';
-import {RezeptevorhandenzutatenComponent} from './rezeptevorhandenzutaten/rezeptevorhandenzutaten.component';
-import {RezeptevorhandenzutatenvegetarischComponent} from './rezeptevorhandenzutatenvegetarisch/rezeptevorhandenzutatenvegetarisch.component';
-import {RezeptevorhandenzutatenveganComponent} from './rezeptevorhandenzutatenvegan/rezeptevorhandenzutatenvegan.component';
-import {RezeptdetailComponent} from './rezeptdetail/rezeptdetail.component';
-import {RezeptorderComponent} from './rezeptorder/rezeptorder.component';
-import {RezeptemitfehlendenzutatenComponent} from './rezeptemitfehlendenzutaten/rezeptemitfehlendenzutaten.component';
-import {RezeptdetailohnezutatenComponent} from './rezeptdetailohnezutaten/rezeptdetailohnezutaten.component';
+import {LoginComponent} from './login/login.component';
+import {HomeComponent} from './home/home.component';
+import {RecipeComponent} from './recipe/recipe.component';
+import {RecipeListComponent} from './recipe-list/recipe-list.component';
+import {RecipeDetailComponent} from './recipe-detail/recipe-detail.component';
+import {FridgeComponent} from './fridge/fridge.component';
+import {FridgeIngredientsComponent} from './fridge-ingredients/fridge-ingredients.component';
+import {FridgeLiveViewComponent} from './fridge-live-view/fridge-live-view.component';
+import {RecipeOrderComponent} from "./recipe-order/recipe-order.component";
 
 const routes: Routes = [
   {
-    path: 'uebersicht',
-    component: UebersichtComponent
+    path: 'home',
+    component: HomeComponent
   },
   {
-    path: 'rezepte',
-    component: RezepteComponent
+    path: 'recipe',
+    component: RecipeComponent
   },
   {
-    path: 'rezepte/item',
-    component: RezeptdetailComponent
+    path: 'recipe-list',
+    component: RecipeListComponent
   },
   {
-    path: 'rezepte/item2',
-    component: RezeptdetailohnezutatenComponent
+    path: 'recipe/:id/detail',
+    component: RecipeDetailComponent
   },
   {
-    path: 'rezepte/bestellen',
-    component: RezeptorderComponent
+    path: 'recipe/:id/order',
+    component: RecipeOrderComponent
   },
   {
-    path: 'rezepte/vorhandenezutaten',
-    component: RezeptevorhandenzutatenComponent
+    path: 'fridge',
+    component: FridgeComponent
   },
   {
-    path: 'rezepte/fehlendezutaten',
-    component: RezeptemitfehlendenzutatenComponent
+    path: 'fridge/ingredients',
+    component: FridgeIngredientsComponent
   },
   {
-    path: 'rezepte/vorhandenezutaten/vegetarisch',
-    component: RezeptevorhandenzutatenvegetarischComponent
+    path: 'fridge/live-view',
+    component: FridgeLiveViewComponent
   },
   {
-    path: 'rezepte/vorhandenezutaten/vegan',
-    component: RezeptevorhandenzutatenveganComponent
-  },
-  {
-    path: 'kuehlschrank',
-    component: KuehlschrankComponent
-  },
-  {
-    path: 'kuehlschrank/zutaten',
-    component: ZutatenComponent
-  },
-  {
-    path: 'kuehlschrank/liveview',
-    component: LiveviewComponent
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: '**',
-    redirectTo: 'uebersicht',
+    redirectTo: 'login',
     pathMatch: 'full'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
-  })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

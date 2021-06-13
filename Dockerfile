@@ -7,7 +7,7 @@ COPY . /app
 RUN npm run build -- --prod=true
 
 FROM nginx:1.17.1-alpine
-COPY --from=build-step /app/dist/InnT/browser /usr/share/nginx/html
+COPY --from=build-step /app/dist/smart-fridge /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
