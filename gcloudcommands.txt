@@ -1,0 +1,12 @@
+docker build -t innt:latest .
+docker run -p 4000:80 --name innt innt:latest
+docker tag innt:latest eu.gcr.io/innt-311417/innt:latest
+
+gcloud auth login
+docker push eu.gcr.io/innt-311417/innt:latest
+
+
+gcloud container images list --repository=eu.gcr.io/innt-311417
+
+
+gcloud run deploy --image eu.gcr.io/innt-311417/innt:latest --port=80
